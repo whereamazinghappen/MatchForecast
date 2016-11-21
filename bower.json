@@ -1,0 +1,25 @@
+{
+  "name": "matchforecast",
+  "description": "vue use normalize-css",
+  "main": "app.vue",
+  "authors": [
+    "zy <306702547@qq.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vue"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "necolas/normalize.css#^5.0.0",
+    "echarts": "^3.3.1"
+  }
+}
