@@ -2,10 +2,12 @@
 	<div :class={spot:isspot} id="worldmap-chart"></div>
 </template>
 <script>
-export default {
-  data(){
+import TeamData from "../assets/js/Team"
+export default {	
+  data (){
   	return{
   		isspot:false,
+  		geoMap:{"SAS":[-98.474081,29.462369]},
   		option:{       
         backgroundColor: '#041A32',       
         geo: {
@@ -20,11 +22,51 @@ export default {
                 }
             }
         },
-        series: []
+        series: [{
+            name: '排名',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            data: [{name:"SAS",symbol:"circle",value:[-98.474081,29.462369,2],itemStyle:{
+            	normal:{
+            		color:'black'
+            	}
+            }}],            
+            symbolSize: 30,
+            label: {
+                normal: {
+                    show: true,
+                    formatter: '{b}'
+                },
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }
+            }
+        }]
     }  
   	}
   },
-  mounted () {
+  methods:{  	
+     formatterData:function(d){
+  		let _res=[];
+  		d.forEach(function(item,index){
+  			let o={name:item.name,
+  			   symbol:`image://http://n.sinaimg.cn/sports/nba/thewire/`+item.name+`_new.png`,
+  			   value:item.coord
+  			};
+  			_res.push(o); 
+  		})
+  		return _res;  		 		
+  	}  
+  },
+  mounted() {
+  	console.log(TeamData);
+  	this.option.series[0].data=this.formatterData(TeamData);
   	const chart=echarts.init(document.querySelector('#worldmap-chart'));  
   	chart.setOption(this.option);
   	this.isspot=true;
