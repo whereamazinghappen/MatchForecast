@@ -25,7 +25,7 @@ const Team =[
 		{name:"pacers",city:"IND",coord:[-86.274564,39.8377]},
 		{name:"nets",city:"BKN",coord:[-74.058759,42.621833]},
 		{name:"bucks",city:"MIL",coord:[-88.040705,43.06859]},
-		{name:"knicks",city:"NY",coord:[-88.040705,43.06859]},
+		{name:"knicks",city:"NY",coord:[-74.008499,40.793042]},
 		{name:"raptors",city:"TOR",coord:[-79.467564,43.699259]},
 		{name:"hornets",city:"CHA",coord:[-80.85656,35.232621]},
 		{name:"hawks",city:"ATL",coord:[-84.418737,33.762784]},
