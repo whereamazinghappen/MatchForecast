@@ -21,7 +21,7 @@ const Team =[
 		{name:"wizards",city:"WAS",coord:[-77.085114,38.9383]},
 		{name:"magic",city:"ORL",coord:[-81.33489,28.625648]},
 		{name:"bulls",city:"CHI",coord:[-87.718752,41.890635]},
-		{name:"a76ers",city:"PHI",coord:[-87.718752,41.890635]},
+		{name:"a76ers",city:"PHI",coord:[-75.222721,40.033664]},
 		{name:"pacers",city:"IND",coord:[-86.274564,39.8377]},
 		{name:"nets",city:"BKN",coord:[-74.058759,42.621833]},
 		{name:"bucks",city:"MIL",coord:[-88.040705,43.06859]},
