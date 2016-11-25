@@ -86,7 +86,15 @@ export default {
 	                curveness: 0.2
 	            }
 	        },
-	        data: [{fromName:'SA',toName:'a76ers',coords:[[-98.476955,29.441738],[-75.222721,40.033664]]}]
+	        data: [{fromName:'spurs',
+                  toName:'a76ers',
+                  coords:[[-98.476955,29.441738],[-75.222721,40.033664]]
+                },
+                {fromName:'cavaliers',
+                 toName:'mavericks',
+                 coords:[[-81.666041,41.463045],[-96.846495,32.7878]]
+                }
+            ]
 	    }]
     }  
   	}
@@ -112,7 +120,8 @@ export default {
   	this.option.series[0].data=this.formatterData(TeamData,1);
   	const chart=echarts.init(document.querySelector('#worldmap-chart'));  
   	chart.setOption(this.option);
-  	this.isspot=true;  	
+  	this.isspot=true;
+    //arrow箭头函数中的this指向vm;  	
   	setTimeout(()=>{
   		this.option.series[0].data=this.formatterData(TeamData);
   		console.log(this.option.series[0].data)  		
