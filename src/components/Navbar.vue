@@ -4,11 +4,11 @@
 			<a href="/" class="nav-logo brand"><img src="../assets/images/logo-trans.png"></a>
 			<div class="nav-link">
 				<ul class="nav-list">
-					<li><a class="hover" href="">首页</a></li>
-					<li><a href="">我的导航</a></li>
-					<li><a href="">我的导航</a></li>
-					<li><a href="">我的导航</a></li>
-					<li><a href="">我的导航</a></li>
+					<li><router-link to='/home' href="">首页</router-link></li>
+					<li><router-link to='/result' href="">历史数据</router-link></li>
+					<li><router-link to='/pkstage' href="">PK擂台</router-link></li>
+					<li><router-link to='/toplist' href="">懂球帝</router-link></li>
+					<li><router-link to='/communication' href="">周边论坛</router-link></li>
 				</ul>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 		float: left;
 	    position: relative;
 	    text-align: center;
-	}
+	}	
 	.nav-link ul li a{
 		text-decoration: none;
 		padding-right: 30px;
@@ -61,8 +61,8 @@
 		&:hover{
 			color:#fff;
 		}
-		&.hover{
-			color: #fff;
-		}
+		&.router-link-active{
+		color: #fff;
+	}
 	}	
 </style>

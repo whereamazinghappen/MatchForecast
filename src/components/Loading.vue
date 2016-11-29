@@ -15,7 +15,7 @@
 			}
 		},
 		mounted(){
-			this.isshow=true;
+			this.isshow=false;
 		}
 	}
 </script>

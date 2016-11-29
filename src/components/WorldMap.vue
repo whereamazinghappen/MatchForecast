@@ -31,7 +31,7 @@ export default {
             		color:'black'
             	}
             }}],            
-            symbolSize: 30,
+            symbolSize: 23,
             label: {
                 normal: {
                     show: false,
@@ -50,17 +50,10 @@ export default {
         },{
         	type:'lines',
         	name:'match',
-        	zlevel: 1,
-	        effect: {
-	            show: true,
-	            period: 6,
-	            trailLength: 0.7,
-	            color: '#46bee9',
-	            symbolSize: 2
-	        },
+        	zlevel: 1,	       
 	         lineStyle: {
 	            normal: {
-	                color: '#46bee9',
+	                color: 'red',
 	                width: 0,
 	                curveness: 0.2
 	            }
@@ -80,7 +73,7 @@ export default {
 	        },
 	        lineStyle: {
 	            normal: {
-	                color: '#46bee9',
+	                color: '#ccc',
 	                width: 1,
 	                opacity: 0.4,
 	                curveness: 0.2
@@ -93,7 +86,11 @@ export default {
                 {fromName:'cavaliers',
                  toName:'mavericks',
                  coords:[[-81.666041,41.463045],[-96.846495,32.7878]]
-                }
+                },
+                {fromName:'warriors',
+                 toName:'heat',
+                 coords:[[-121.928526,37.340038],[-80.267847,25.896686]]
+                },
             ]
 	    }]
     }  
@@ -123,8 +120,7 @@ export default {
   	this.isspot=true;
     //arrow箭头函数中的this指向vm;  	
   	setTimeout(()=>{
-  		this.option.series[0].data=this.formatterData(TeamData);
-  		console.log(this.option.series[0].data)  		
+  		this.option.series[0].data=this.formatterData(TeamData);  		  		
   		chart.setOption(this.option);
   	},7000)
   }
