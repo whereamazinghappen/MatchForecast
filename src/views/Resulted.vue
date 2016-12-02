@@ -1,6 +1,6 @@
 <template>
 	<div>
-		i am another pagecontent
+		vue+scroll.js
 	</div>
 </template>
 <script>
