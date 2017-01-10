@@ -35,8 +35,7 @@ export default {
       this.isrotate=!this.isrotate;
       this.transitioning=true;
     })
-    flow.addEventListener("transitionend",(e)=>{
-      console.log(e);
+    flow.addEventListener("transitionend",(e)=>{   
       this.transitioning=false;
     })
   }
@@ -59,18 +58,22 @@ export default {
 }
 #main_content{
    height: calc(50% - 60px);
-   transition: transform 1s linear;
+   transition: transform 1s linear .5s;
 }
 #main_content.up{
-  transform: translateY(-100%);
+  transform: translateY(-100%);  
 }
 .map-container{
   height: 100%;
   overflow: hidden;
-  transition: transform 1s linear; 
+  transition: transform 1s linear;
+  border: 1px solid #346191;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #186ec3; 
 }
 .map-container.rotate{
   transform-style: preserve-3d;
   transform:rotateX(90deg);
+  transform-origin: 50% 0;
 }
 </style>

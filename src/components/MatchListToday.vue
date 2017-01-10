@@ -1,8 +1,15 @@
 <template>
 	<div class="container-todayMatchList">
+	<div class="H1">今日热门比赛</div>
+	 <div class="matchs-box">
 		<div class="eachMatch-box" v-for="match in matchs">
-			{{ match.time+match.home }}
-		</div>	
+			<div class="match-time">{{ match.time }}</div>
+			<div class="team-box">
+				<div :style="{backgroundImage: 'url('+match.home.icon+')' }" class="f_l home">{{ match.home.name }}</div>
+				<div :style="{backgroundImage: 'url('+match.guest.icon+')' }" class="f_r guest">{{ match.guest.name }}</div>
+			</div>
+		</div>
+	 </div>		
 	</div>
 </template>
 <script>
@@ -10,11 +17,12 @@
 		data (){
 			return {
 				matchs:[
-				{time:"2017-01-01 08:00",home:"Lakers",guest:"Rockets","realResult":"home","forcastResult":"home"},
-				{time:"2017-01-01 08:00",home:"Lakers",guest:"Rockets","realResult":"home","forcastResult":"home"},
-				{time:"2017-01-01 08:00",home:"Lakers",guest:"Rockets","realResult":"home","forcastResult":"home"},
-				{time:"2017-01-01 08:00",home:"Lakers",guest:"Rockets","realResult":"home","forcastResult":"home"},
-				{time:"2017-01-01 08:00",home:"Lakers",guest:"Rockets","realResult":"home","forcastResult":"home"}]
+				{time:"2017-01-01 08:00",home:{name:"Lakers",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/18.png"},guest:{name:"Rockets",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/4.png"},"realResult":"home","forcastResult":"home"},
+				{time:"2017-01-01 08:00",home:{name:"Lakers",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/18.png"},guest:{name:"Rockets",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/1.png"},"realResult":"home","forcastResult":"home"},
+				{time:"2017-01-01 08:00",home:{name:"Lakers",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/18.png"},guest:{name:"Rockets",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/17.png"},"realResult":"home","forcastResult":"home"},
+				{time:"2017-01-01 08:00",home:{name:"Lakers",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/18.png"},guest:{name:"Rockets",icon:"http://mat1.gtimg.com/sports/nba/logo/1602/22.png"},"realResult":"home","forcastResult":"home"},
+				
+				]
 			}
 		}
 	}
@@ -22,9 +30,9 @@
 <style lang="scss">
 .container-todayMatchList{
 	height:100%;
-	width:100%;
+	width:80%;
 	min-width:1190px;
-	display:flex;
+	margin: 0 auto;
 }
 .eachMatch-box{
 	height:300px;
@@ -32,5 +40,32 @@
 	border:1px solid #369;
 	flex:1;
 	color: red;	
+}
+.H1{
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	padding: 30px 0;
+}
+.matchs-box{
+	height: 80%;
+	display: flex;
+}
+.match-time{
+	text-align: center;
+	padding: 10px 0;
+	color: #33b0ff;
+}
+.f_l{
+	float: left;
+}
+.f_r{
+	float: right;
+}
+.team-box div{
+	width: 100px;
+	height: 100px;
+	background-size:cover;
+	text-align: center;
 }
 </style>
