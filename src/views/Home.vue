@@ -74,6 +74,6 @@ export default {
 .map-container.rotate{
   transform-style: preserve-3d;
   transform:rotateX(90deg);
-  transform-origin: 50% 0;
+  transform-origin: 50%;
 }
 </style>

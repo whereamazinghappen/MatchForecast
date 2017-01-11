@@ -8,6 +8,10 @@
 				<div :style="{backgroundImage: 'url('+match.home.icon+')' }" class="f_l home">{{ match.home.name }}</div>
 				<div :style="{backgroundImage: 'url('+match.guest.icon+')' }" class="f_r guest">{{ match.guest.name }}</div>
 			</div>
+			<div class="suppport">
+				<div class="support-title">支持率</div>
+				<div class="support-content"><div class="rate-home"></div></div>
+			</div>
 		</div>
 	 </div>		
 	</div>
@@ -62,10 +66,29 @@
 .f_r{
 	float: right;
 }
+.team-box{
+	height :120px;
+}
 .team-box div{
 	width: 100px;
 	height: 100px;
-	background-size:cover;
+	background-size: contain;
 	text-align: center;
+	padding-top: 100px;
+	background-repeat: no-repeat;
+}
+.support-title{
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+.support-content{
+	background-color: #2690fe;
+	height: 10px;
+}
+.rate-home{
+	background-color: #ea4444;
+	height: 100%;
+	width: 63%;
 }
 </style>
