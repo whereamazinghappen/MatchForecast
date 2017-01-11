@@ -9,7 +9,7 @@ export default {
   		isspot:false,
   		geoMap:{"SAS":[-98.474081,29.462369]},
   		option:{       
-        backgroundColor: '#041A32',       
+        //backgroundColor: '#041A32',       
         geo: {
             map: 'world',
             left: 0,
@@ -18,7 +18,8 @@ export default {
             itemStyle: {
                 normal: {
                     borderColor: '#369',
-                    color: '#10253C'
+                    //color: '#10253C'
+                    color:'rgba(0,85,117,.15)'
                 }
             }
         },
