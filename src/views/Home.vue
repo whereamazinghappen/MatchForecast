@@ -46,7 +46,7 @@ export default {
 .container{
   height: 200%;
   background-image:url("../../static/images/bj.jpg");
-  background-size:cover;
+  background-size:contain;
 }
 #header {
   font-family: "Microsoft YaHei",​Tahoma,​Arial,​sans-serif;
